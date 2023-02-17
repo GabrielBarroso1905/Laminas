@@ -6,11 +6,13 @@ use Laminas\ServiceManager\Factory\InvokableFactory;
 
 
 return [
+    //As fectories devem ser declaradas primeiro
     'controllers' => [
         'factories' => [
             Controller\AlbumController::class => InvokableFactory::class,
         ],
-    ],
+    ], 
+    //Depois disso vem as rotas
     // The following section is new and should be added to your file:
     'router' => [
         'routes' => [
